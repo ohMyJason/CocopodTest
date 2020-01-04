@@ -23,7 +23,7 @@ extension NetWorkRequest{
     func getRequest(UrlString:String,params:[String:Any]?,success:@escaping(_ response:[String:AnyObject])->(),failure:@escaping(_ error:Error)->()) {
         let PathUrl = BaseUrl+UrlString
         let headerss: HTTPHeaders = [
-            "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMDIwLTAxLTA1IDAwOjU5OjU2LzIifQ.RJjME5ykMplDIAxoVPngwNDFLEDKiplxTZYmoKC-FLs"
+            "token":token!
         ]
 
         
@@ -51,7 +51,7 @@ extension NetWorkRequest{
     func postRequest(UrlString:String,paramer:[String:Any]?,success:@escaping(_ response:JSON)->(),failure:@escaping(_ error:Error)->()){
         let PathUrl = BaseUrl+UrlString
         let headerss: HTTPHeaders = [
-            "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMDIwLTAxLTA1IDAwOjU5OjU2LzIifQ.RJjME5ykMplDIAxoVPngwNDFLEDKiplxTZYmoKC-FLs"
+            "token":token!
         ]
         Alamofire.request(PathUrl, method: HTTPMethod.post, parameters: paramer,headers:headerss).responseJSON { (response) in
             switch response.result{

@@ -78,7 +78,7 @@ class BlogTableViewController: UITableViewController {
 
     
     func getBlogs(){
-        let parm = ["size":"1000","page":"1"]
+        let parm = ["size":"100","page":"1"]
         var blogList = [Blog]()
         NetWorkRequest.sharedInstance.postRequest(UrlString:"blog/showBlogByCreateTime" , paramer: parm, success: { (res) in
             

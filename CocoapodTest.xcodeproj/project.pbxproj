@@ -13,6 +13,7 @@
 		961C2C8A23C0D15100CE0C87 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2C8923C0D15100CE0C87 /* Comment.swift */; };
 		961C2C8E23C0D34900CE0C87 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2C8D23C0D34900CE0C87 /* CommentTableViewCell.swift */; };
 		961C2C9023C0D48A00CE0C87 /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2C8F23C0D48A00CE0C87 /* CommentTableViewController.swift */; };
+		961C2C9323C112E100CE0C87 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2C9223C112E100CE0C87 /* UserInfoViewController.swift */; };
 		962D441923BFD85A00034A3A /* CommentUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962D441823BFD85A00034A3A /* CommentUtil.swift */; };
 		96CE3FF423BCB35F0083ADA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3FF323BCB35F0083ADA4 /* AppDelegate.swift */; };
 		96CE3FF623BCB35F0083ADA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE3FF523BCB35F0083ADA4 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		961C2C8923C0D15100CE0C87 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		961C2C8D23C0D34900CE0C87 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		961C2C8F23C0D48A00CE0C87 /* CommentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
+		961C2C9223C112E100CE0C87 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		962D441823BFD85A00034A3A /* CommentUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentUtil.swift; sourceTree = "<group>"; };
 		96CE3FF023BCB35F0083ADA4 /* CocoapodTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CE3FF323BCB35F0083ADA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,17 +148,18 @@
 				96CE3FF723BCB35F0083ADA4 /* Main.storyboard */,
 				96CE3FFA23BCB3620083ADA4 /* Assets.xcassets */,
 				96CE3FFC23BCB3620083ADA4 /* LaunchScreen.storyboard */,
-				96CE3FFF23BCB3620083ADA4 /* Info.plist */,
+				96CE402B23BEAA1C0083ADA4 /* Blog.swift */,
+				961C2C8923C0D15100CE0C87 /* Comment.swift */,
 				96CE402323BCD0F20083ADA4 /* NetWorkRequest.swift */,
+				96CE3FFF23BCB3620083ADA4 /* Info.plist */,
 				96CE402723BEA6F20083ADA4 /* BlogTableViewController.swift */,
 				96CE402923BEA9600083ADA4 /* BlogTableViewCell.swift */,
-				96CE402B23BEAA1C0083ADA4 /* Blog.swift */,
 				9607A03F23BF546E00306838 /* SentViewController.swift */,
 				962D441823BFD85A00034A3A /* CommentUtil.swift */,
 				961C2C8523C0C49E00CE0C87 /* DetailViewController.swift */,
-				961C2C8923C0D15100CE0C87 /* Comment.swift */,
 				961C2C8D23C0D34900CE0C87 /* CommentTableViewCell.swift */,
 				961C2C8F23C0D48A00CE0C87 /* CommentTableViewController.swift */,
+				961C2C9223C112E100CE0C87 /* UserInfoViewController.swift */,
 			);
 			path = CocoapodTest;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				96CE402C23BEAA1C0083ADA4 /* Blog.swift in Sources */,
 				96CE402423BCD0F20083ADA4 /* NetWorkRequest.swift in Sources */,
 				96CE402823BEA6F20083ADA4 /* BlogTableViewController.swift in Sources */,
+				961C2C9323C112E100CE0C87 /* UserInfoViewController.swift in Sources */,
 				961C2C9023C0D48A00CE0C87 /* CommentTableViewController.swift in Sources */,
 				961C2C8E23C0D34900CE0C87 /* CommentTableViewCell.swift in Sources */,
 				961C2C8623C0C49E00CE0C87 /* DetailViewController.swift in Sources */,
