@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+var token:String? = "null"
+var blogId:Int? = 213
+var commentNum:Int? = 0
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
