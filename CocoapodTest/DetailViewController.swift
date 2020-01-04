@@ -25,6 +25,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "微博详情"
         contenLabel.text = blog?.content
         userNameLabel.text = blog?.userName
         dateLabel.text = blog?.date

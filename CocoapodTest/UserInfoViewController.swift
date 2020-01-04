@@ -17,7 +17,7 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         NetWorkRequest.sharedInstance.postRequest(UrlString: "userInfo/getUserInfo", paramer: nil, success: {(res) in
             let ifSuccess:String = res["code"].rawString()!
             print(ifSuccess)

@@ -26,7 +26,8 @@ class SentViewController: UIViewController {
         
         let param = jsonData.dictionaryObject;        NetWorkRequest.sharedInstance.postJsonRequest(UrlString:"blog/insertBlog" , paramer: param, success: { (res) in
             print(res)
-            CommentUtil().alert(controller:self,title: "您好",msg:"发送成功")
+            CommentUtil().alert(controller:self,title: "提示",msg:"发送成功")
+            self.blogContentLabel.text = ""
         }) { (error) in
             print(error)
         }
