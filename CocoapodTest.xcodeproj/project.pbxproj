@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2AF1B2877C28AE962B464BF7 /* Pods_CocoapodTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB10D9B5B4EE8CB76D04161D /* Pods_CocoapodTest.framework */; };
 		9607A04023BF546E00306838 /* SentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607A03F23BF546E00306838 /* SentViewController.swift */; };
+		96080AAA23C256E100185244 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96080AA923C256E000185244 /* RegisterViewController.swift */; };
 		961C2C8623C0C49E00CE0C87 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2C8523C0C49E00CE0C87 /* DetailViewController.swift */; };
 		961C2C8A23C0D15100CE0C87 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2C8923C0D15100CE0C87 /* Comment.swift */; };
 		961C2C8E23C0D34900CE0C87 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2C8D23C0D34900CE0C87 /* CommentTableViewCell.swift */; };
@@ -53,6 +54,7 @@
 		68CFFB64791FF6A242A006CE /* Pods-CocoapodTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodTest.debug.xcconfig"; path = "Target Support Files/Pods-CocoapodTest/Pods-CocoapodTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7BB217CED30E184BFB6A9406 /* Pods-CocoapodTest-CocoapodTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodTest-CocoapodTestTests.debug.xcconfig"; path = "Target Support Files/Pods-CocoapodTest-CocoapodTestTests/Pods-CocoapodTest-CocoapodTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9607A03F23BF546E00306838 /* SentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentViewController.swift; sourceTree = "<group>"; };
+		96080AA923C256E000185244 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		961C2C8523C0C49E00CE0C87 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		961C2C8923C0D15100CE0C87 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		961C2C8D23C0D34900CE0C87 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				961C2C8D23C0D34900CE0C87 /* CommentTableViewCell.swift */,
 				961C2C8F23C0D48A00CE0C87 /* CommentTableViewController.swift */,
 				961C2C9223C112E100CE0C87 /* UserInfoViewController.swift */,
+				96080AA923C256E000185244 /* RegisterViewController.swift */,
 			);
 			path = CocoapodTest;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				961C2C9323C112E100CE0C87 /* UserInfoViewController.swift in Sources */,
 				961C2C9023C0D48A00CE0C87 /* CommentTableViewController.swift in Sources */,
 				961C2C8E23C0D34900CE0C87 /* CommentTableViewCell.swift in Sources */,
+				96080AAA23C256E100185244 /* RegisterViewController.swift in Sources */,
 				961C2C8623C0C49E00CE0C87 /* DetailViewController.swift in Sources */,
 				9607A04023BF546E00306838 /* SentViewController.swift in Sources */,
 				961C2C8A23C0D15100CE0C87 /* Comment.swift in Sources */,

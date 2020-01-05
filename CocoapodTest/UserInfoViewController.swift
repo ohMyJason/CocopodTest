@@ -27,7 +27,16 @@ class UserInfoViewController: UIViewController {
                 
                 self.userNameLabel.text = res["data"]["userName"].rawString()
                 self.phoneLabel.text = res["data"]["phone"].rawString()
-                self.sexLabel.text = res["data"]["phone"].rawString()
+                if res["data"]["sex"].rawString() == "0"{
+                    self.sexLabel.text = "保密"
+                }else if res["data"]["sex"].rawString() == "1"{
+                    self.sexLabel.text = "男"
+                }else if res["data"]["sex"].rawString() == "2"{
+                    self.sexLabel.text = "女"
+                }else{
+                    self.sexLabel.text = "数据错误"
+                }
+                
                 self.emailLabel.text = res["data"]["email"].rawString()
                 print("个人信息获取成功")
             }else{

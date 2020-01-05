@@ -64,17 +64,10 @@ class ViewController: UIViewController {
     
     @IBAction func doLogin(_ sender: Any) {
         
-        let loginMsg = userDef.string(forKey: "token")
         
-        
-        if  loginMsg != "null" {
-            self.performSegue(withIdentifier: "login", sender: self)
-        }else{
         
         let parm = ["loginName":userName.text!,"password":password.text!]
-        
-        
-        
+  
         NetWorkRequest.sharedInstance.postRequest(UrlString:"userLogin/login" , paramer: parm, success: { (res) in
             let ifSuccess:String = res["code"].rawString()!
             print(ifSuccess)
@@ -85,7 +78,7 @@ class ViewController: UIViewController {
                 userDef.set(token!, forKey: "token")
                 self.performSegue(withIdentifier: "login", sender: self)
                 print("登陆缓存为")
-                print(userDef.string(forKey: "token"))
+                print(userDef.string(forKey: "token") as! String as Any)
                 
             }else{
                 print("密码错误")
@@ -99,7 +92,7 @@ class ViewController: UIViewController {
         }) { (error) in
             
         }
-        }
+        
 //        if (userName.text! == "123" && password.text! == "123") {
 //            self.performSegue(withIdentifier: "login", sender: self)
 //        }else{
