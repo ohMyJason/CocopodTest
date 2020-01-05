@@ -42,6 +42,7 @@ class UserInfoViewController: UIViewController {
     
     @IBAction func exitLogin(_ sender: Any) {
         token! = "null"
+        userDef.set("null", forKey: "token")
     }
     
     /*

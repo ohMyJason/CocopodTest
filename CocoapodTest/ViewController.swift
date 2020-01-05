@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import SVProgressHUD
-
+let userDef = UserDefaults.standard
 class ViewController: UIViewController {
 
     @IBOutlet weak var userName: UITextField!
@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var login: UIButton!
     
-
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -34,12 +35,45 @@ class ViewController: UIViewController {
         
         
         
+        
+
+    
+        
+        
        
     }
     
+   
+    @IBAction func jump(_ sender: Any) {
+        let loginMsg = userDef.string(forKey: "token")
+        if  loginMsg != "null" {
+            
+            token! = loginMsg!
+            
+            print("已经登陆，直接跳转")
+            
+            print(loginMsg!)
+            self.performSegue(withIdentifier: "login", sender: self)
+        }else{
+            print("需要登陆")
+            print(loginMsg!)
+            CommentUtil().alert(controller: self, title: "提示", msg: "请登录")
+        }
+    }
+    
+    
     @IBAction func doLogin(_ sender: Any) {
         
+        let loginMsg = userDef.string(forKey: "token")
+        
+        
+        if  loginMsg != "null" {
+            self.performSegue(withIdentifier: "login", sender: self)
+        }else{
+        
         let parm = ["loginName":userName.text!,"password":password.text!]
+        
+        
         
         NetWorkRequest.sharedInstance.postRequest(UrlString:"userLogin/login" , paramer: parm, success: { (res) in
             let ifSuccess:String = res["code"].rawString()!
@@ -48,7 +82,10 @@ class ViewController: UIViewController {
                 print("登陆成功")
                 print(res["data"]["token"].rawString()!)
                 token! = res["data"]["token"].rawString()!
+                userDef.set(token!, forKey: "token")
                 self.performSegue(withIdentifier: "login", sender: self)
+                print("登陆缓存为")
+                print(userDef.string(forKey: "token"))
                 
             }else{
                 print("密码错误")
@@ -61,6 +98,7 @@ class ViewController: UIViewController {
             }
         }) { (error) in
             
+        }
         }
 //        if (userName.text! == "123" && password.text! == "123") {
 //            self.performSegue(withIdentifier: "login", sender: self)
