@@ -14,16 +14,34 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
     
+    @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet weak var emailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
         
         NetWorkRequest.sharedInstance.postRequest(UrlString: "userInfo/getUserInfo", paramer: nil, success: {(res) in
             let ifSuccess:String = res["code"].rawString()!
             print(ifSuccess)
             if(ifSuccess == "0"){
                 
+                // 同步加载网络图片
+                let url = URL(string: "http:\(res["data"]["avatarUrl"].rawString()!)")
+                // 从url上获取内容
+                // 获取内容结束才进行下一步
+                print("url")
+                print(res["data"]["avatarUrl"].rawString()!)
+                let data = try? Data(contentsOf: url!)
                 
+                if data != nil {
+                    let image = UIImage(data: data!)
+                    self.userPhoto.image = image
+                }
+                self.userPhoto.layer.cornerRadius = 10
                 
                 self.userNameLabel.text = res["data"]["userName"].rawString()
                 self.phoneLabel.text = res["data"]["phone"].rawString()

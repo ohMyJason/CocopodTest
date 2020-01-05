@@ -87,7 +87,7 @@ class BlogTableViewController: UITableViewController {
                 let content = blog.1["content"].rawString()
                 let date = blog.1["createTime"].rawString()
                 let blogId = blog.1["blogId"].rawValue as! Int
-                let blogItem = Blog(userName: userName! , content: content! , date: date!,blogId: blogId )
+                let blogItem = Blog(userName: userName! , content: content! , date: date!,blogId: blogId, imgUrl : blog.1["avatarUrl"].rawString()!)
                 blogList.append(blogItem)
             
             }
