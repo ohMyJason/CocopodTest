@@ -22,13 +22,31 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var commentContentLabel: UITextField!
     
-
+    @IBOutlet weak var userPhoto: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "微博详情"
         contenLabel.text = blog?.content
         userNameLabel.text = blog?.userName
         dateLabel.text = blog?.date
+        
+        
+        // 同步加载网络图片
+        let url = URL(string: (blog?.imgUrl!)!)
+        // 从url上获取内容
+        // 获取内容结束才进行下一步
+       
+       
+        let data = try? Data(contentsOf: url!)
+        
+        if data != nil {
+            let image = UIImage(data: data!)
+            self.userPhoto.image = image
+        }
+        self.userPhoto.layer.cornerRadius = 10
+        
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func sentComment(_ sender: Any) {
